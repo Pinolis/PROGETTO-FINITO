@@ -6,7 +6,7 @@ import java.awt.Graphics;
 /**
  * The Painter class is used to draw inside the paintComponent method 
  * through Graphics Objects
- * @author Edoardo, Federicp, Andrea
+ * @author Edoardo, Federico, Andrea
  *
  */
 
