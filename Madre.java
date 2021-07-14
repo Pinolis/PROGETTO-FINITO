@@ -1,4 +1,4 @@
-
+package scrap;
 /**the Madre class represents the wife of the current emperor
  * and the mother of the future emperor
  * 
