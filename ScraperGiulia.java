@@ -1,4 +1,4 @@
-
+package scrap;
 import java.util.ArrayList;
 import org.openqa.selenium.WebDriver;
 
