@@ -177,7 +177,7 @@ public class Imperatore extends Persona {
 	 * @return boolean
 	 */
 	public boolean hasMotherWife() {
-		if ( this.hasMogli() && getSuccessore().hasMother() && this.getMogli().contains(getSuccessore().getMadre())) {
+		if ( this.hasSuccessor() && this.hasMogli() && getSuccessore().hasMother() && this.getMogli().contains(getSuccessore().getMadre())) {
 			return true;
 		}
 		else { 
