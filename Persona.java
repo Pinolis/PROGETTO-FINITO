@@ -1,4 +1,6 @@
-blic class Persona {
+package scrap;
+
+public class Persona {
 	
     private String nome;
 	private String url;
