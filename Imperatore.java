@@ -16,7 +16,7 @@ public class Imperatore extends Persona {
 	private Persona madre;
 	private boolean fratelloSuccessore;
 	private boolean adopted;
-	private String NascitaMorte;
+	private String nascitaMorte;
 	private String imageLink;
 	// da aggiungere poi altre informazioni
 	
@@ -177,7 +177,7 @@ public class Imperatore extends Persona {
 	 * @return boolean
 	 */
 	public boolean hasMotherWife() {
-		if ( this.hasSuccessor() && this.hasMogli() && getSuccessore().hasMother() && this.getMogli().contains(getSuccessore().getMadre())) {
+		if ( this.hasMogli() && getSuccessore().hasMother() && this.getMogli().contains(getSuccessore().getMadre())) {
 			return true;
 		}
 		else { 
@@ -201,14 +201,16 @@ public class Imperatore extends Persona {
 	 * @return the date of birth and death
 	 */
 	public String getNascitaMorte() {
-		return NascitaMorte;
+		return nascitaMorte;
 	}
 
 	/**set the date of birth and death
 	 * @param nascitaMorte the date of birth and death
 	 */
-	public void setNascitaMorte(String nascitaMorte) {
-		NascitaMorte = nascitaMorte;
+	public void setNascitaMorte(String birthDeath) {
+		birthDeath = birthDeath.replaceAll("a.C.", "");
+		birthDeath = birthDeath.replaceAll("d.C.", "");
+		this.nascitaMorte = birthDeath;
 	}
 
 	/**get the link of the profile image 
