@@ -1,5 +1,6 @@
 package scrap;
-/*            ___       
+
+/*            ___      
               \\||      
              ,'_,-\     
              ;'____\    
@@ -25,8 +26,19 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
+/**
+ * This class build the frame of the GUI
+ * @author Andrea, Edoardo, Federjco
+ *
+ */
 public class Frame {
 	
+	/**
+	 *The constructor of the class builds the frame adding
+	 * a JPanel in which the family tree of the dinasty
+	 * will be set and displaying a list from which 
+	 * the user will be able to choose that
+	 */
 	public Frame() {
 		
 //__________________________________________________________________________________________________________________
@@ -91,6 +103,13 @@ public class Frame {
 //AZIONE RESET FRAME
 		reset.addActionListener(new Azione2(master));
 	}
+	
+	/**
+	 * This is the main of the entire project,
+	 * it starts the GUI and open a new frame
+	 * 
+	 * @param args constant argument
+	 */
 	public static void main(String[] args) {
 		Frame f= new Frame();
 	}
