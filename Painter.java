@@ -1,4 +1,11 @@
 package scrap;
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.util.ArrayList;
+import javax.swing.JFrame;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -23,8 +30,8 @@ public class Painter {
 	 * The constructor set the width and length of the panel
 	 * and set the fratello variable to 0
 	 * 
-	 * @param rad, the first emperor
-	 * @param numgen, the number of generations
+	 * @param rad the first emperor
+	 * @param numgen the number of generations
 	 */
 	public Painter(Imperatore rad, int numgen) {
 		radice=rad;
@@ -36,11 +43,11 @@ public class Painter {
 	}
 	/**
 	 * This method is used to draw in paintComponent 
-	 * @param g, a Graphics component
-	 * @param rad, the current Emperor
-	 * @param WSez, the width of the section I'm drawing in
-	 * @param livello, the current level
-	 * @param ripeti, a boolean that is needed for the case FratelliImperatori
+	 * @param g a Graphics component
+	 * @param rad the current Emperor
+	 * @param WSez the width of the section I'm drawing in
+	 * @param livello the current level
+	 * @param ripeti a boolean that is needed for the case FratelliImperatori
 	 */
 	public void ricorsiva(Graphics g, Imperatore rad, int WSez, int livello, boolean ripeti)
 	{
@@ -208,9 +215,9 @@ public class Painter {
 		 * reset the cursor in a initial point placed
 		 * at the center of the Generation slightly to the left to 
 		 * for the scriviNome method
-		 * @param W, the current width of the section I'm drawing in
-		 * @param lenN, the length of names
-		 * @param liv, the current level
+		 * @param W the current width of the section I'm drawing in
+		 * @param lenN the length of names
+		 * @param liv the current level
 		 */
 		public void resetCursore(int W, int lenN, int liv) {
 		//se si attiva l'if o l'else if vuol dire che W è W/2 in quanto passato come parametro a ricorsiva per il caso dei fratelli imperatori
@@ -230,9 +237,9 @@ public class Painter {
 	
 	/**
 	 * This method draws the Emperors' sons
-	 * @param imp, the Emperor
-	 * @param g, a Graphics component
-	 * @param WSezTotale, the current width of the section I'm drawing in
+	 * @param imp the Emperor
+	 * @param g a Graphics component
+	 * @param WSezTotale the current width of the section I'm drawing in
 	 */
 	public void disegnaFigli(Imperatore imp, Graphics g, int WSezTotale) {
 
@@ -336,9 +343,9 @@ public class Painter {
 	/**
 	 * This method draws the Emperor wives that aren't the successor
 	 * mother if present
-	 * @param imp, the emperor
-	 * @param g, a Graphics component
-	 * @param cursore, a poiter in the canvas
+	 * @param imp the emperor
+	 * @param g a Graphics component
+	 * @param cursore a poiter in the canvas
 	 */
 	public void disegnaMogliInutili(Imperatore imp, Graphics g, int[] cursore) 
 	{
@@ -417,11 +424,11 @@ public class Painter {
 	
 	/**
 	 * this method draws a dotted line if the emperor is adopted
-	 * @param x1, inizial x coordinate
-	 * @param y1, inizial y coordinate
-	 * @param x2, final x coordinate
-	 * @param y2, fianl y coordinate
-	 * @param g, a Graphics component
+	 * @param x1  inizial x coordinate
+	 * @param y1 inizial y coordinate
+	 * @param x2  final x coordinate
+	 * @param y2  fianl y coordinate
+	 * @param g  a Graphics component
 	 */
 	public void disegnaAdozione(int x1, int y1, int x2, int y2, Graphics g) {
         g.setColor(Color.RED);
@@ -442,9 +449,9 @@ public class Painter {
 	
 	/**
 	 * This method draws the name of a person in a specific point
-	 * @param persona, the person i want to write the name of
-	 * @param g, a Graphic component
-	 * @param cursore, a pointer in the canvas
+	 * @param persona the person i want to write the name of
+	 * @param g a Graphic component
+	 * @param cursore a pointer in the canvas
 	 */
 	public void scriviNome(Persona persona, Graphics g, int[] cursore) {
 		int gioco=10;
@@ -490,7 +497,7 @@ public class Painter {
 	}
 	/**
 	 * A supplement method needed by scriviNome
-	 * @param nome, name of the Person
+	 * @param nome name of the Person
 	 * @return the last line of the person name
 	 */
 	private static String ultimaRiga(String nome) {
@@ -519,4 +526,3 @@ public class Painter {
 		return length;
 	}
 }
-
