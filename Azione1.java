@@ -1,13 +1,32 @@
 package scrap;
+
 import java.awt.BorderLayout;
 
 import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
+/**
+ * This ActionListener will activate when the user will choose from one of the dinasties and it will
+ * pass the information to the scraper, it then will pass the data generated from the scraper to the 
+ * class PannelloTela that is in fact a JPanel that will be showed on the frame and it will
+ * contains the drawed family tree
+ * 
+ * @author Andrea, Edoardo, Federico
+ *
+ */
 
 public class Azione1 implements ActionListener {
+	/**
+	 * 
+	 */
 	public static Dinastia dinastiaSel=null;
+	/**
+	 * .
+	 */
 	public static JScrollPane scrollable;
+	/**
+	 * .
+	 */
 	public static PannelloTela res;
 	private JFrame frame;
 	private JComboBox lista;
@@ -18,6 +37,17 @@ public class Azione1 implements ActionListener {
 	private JPanel pannello;
 	private Color c;
 	
+	/**
+	 * Constructor of the class
+	 * @param fr the frame
+	 * @param l the list of the combobox
+	 * @param fi the main panel 
+	 * @param rem the panel for the reset
+	 * @param rese the button for the reset
+	 * @param lab panel that contains text
+	 * @param pan upper panel containing the combobox
+	 * @param color the background color
+	 */
 	public Azione1(JFrame fr,JComboBox l,JPanel fi,JPanel rem,JButton rese,JLabel lab,JPanel pan,Color color) {
 		frame=fr;
 		lista=l;
@@ -29,6 +59,9 @@ public class Azione1 implements ActionListener {
 		c=color;
 		
 	}
+
+	
+	
 	public void actionPerformed(ActionEvent event) {
 		finestra.repaint();
 		dinastiaSel = (Dinastia) lista.getSelectedItem();
