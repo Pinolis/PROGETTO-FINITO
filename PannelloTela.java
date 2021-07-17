@@ -1,4 +1,5 @@
 package scrap;
+
 import java.awt.Color;
 
 import java.awt.Dimension;
@@ -14,14 +15,16 @@ import javax.swing.JPanel;
  */
 public class PannelloTela extends JPanel{
 	private static final long serialVersionUID = 1L;
-	private Painter painter=null;
+
+	/**
+	 * .
+	 */
+	private Painter painter=null; 
 	
 /**
  * The constructor build a JPanel that contains the Root of the dinastia and 
  * the number of generations in the Dinastia.
  * It also create a Painter Object that will be use to draw.
- * @param root, the first Emperor 
- * @param generazione, the number of generations
  */
 	public PannelloTela() {
 		
@@ -44,7 +47,7 @@ public class PannelloTela extends JPanel{
 	 * This method overrides the JPanel method and draws the image calling 
 	 * the method ricorsiva of the object Painter
 	 * 
-	 * @param g, a graphic component
+	 * @param g a graphic component
 	 */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);       
